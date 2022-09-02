@@ -1,0 +1,34 @@
+
+body{
+    background:red;
+    background: linear-gradient(to right, yellow, orange)
+}
+
+.bg{
+    background-image:url(img/logoLogin.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.borrar-ticket {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.table-dark {
+    --bs-table-bg: #343a40;
+}
+
+.table>:not(caption)>*>*{
+
+    padding:0.5rem 0.9rem;
+
+}
+
+.table {
+    vertical-align:middle;
+}
