@@ -33,10 +33,6 @@ function eliminarTicket(ticket){
         const datosTicketHead = ticketAEliminar.querySelector('thead')
         const datosTicketBody = ticketAEliminar.querySelector('tbody')
 
-        console.log(ticketAEliminar);
-        console.log(datosTicketHead);
-        console.log(datosTicketBody);
-
         while(datosTicketHead.firstChild) {
             datosTicketHead.removeChild(datosTicketHead.firstChild);
         }
@@ -56,7 +52,7 @@ function agregarTicket(e){
     if(e.target.classList.contains("agregar-carrito")){
 
         const ticket = e.target.parentElement.parentElement.parentElement
-        console.log(ticket);
+        //console.log(ticket);
 
         leerDatosTicket(ticket);
     }
@@ -73,7 +69,7 @@ function leerDatosTicket(ticket) {
         id: ticket.querySelector("a").getAttribute('data-id')
     }
 
-    console.log(infoTicket);
+    //console.log(infoTicket);
 
     existe = articulosCarrito.some(ticket => ticket.id == infoTicket.id)
 
@@ -90,7 +86,7 @@ function leerDatosTicket(ticket) {
             
         } );
 
-        console.log(tickets);
+        //console.log(tickets);
 
         articulosCarrito = [...tickets];
         
@@ -100,7 +96,7 @@ function leerDatosTicket(ticket) {
         articulosCarrito = [...articulosCarrito , infoTicket];
     }
 
-    console.log(articulosCarrito);
+    //console.log(articulosCarrito);
 
     cargarHTMLCarrito(infoTicket)
 }
@@ -131,7 +127,7 @@ function cargarHTMLCarrito(infoTicket) {
             contenedorCarritoDesayuno.removeChild(contenedorCarritoDesayuno.firstChild);
         }
 
-        console.log("Es desayuno");
+        //console.log("Es desayuno");
 
         desayuno = articulosCarrito.filter(ticket => ticket.id == 1)
         
@@ -164,7 +160,7 @@ function cargarHTMLCarrito(infoTicket) {
                 contenedorCarritoAlmuerzo.removeChild(contenedorCarritoAlmuerzo.firstChild);
             }
 
-            console.log("Es almuerzo");
+            //console.log("Es almuerzo");
 
             almuerzo = articulosCarrito.filter(ticket => ticket.id == 2)
 
@@ -183,7 +179,7 @@ function cargarHTMLCarrito(infoTicket) {
                 contenedorCarritoAlmuerzo.appendChild(row);
             });
         } else {
-            console.log("Es cena");
+            //console.log("Es cena");
 
             if (cabeceraCarritoCena.firstChild) {
                 cabeceraCarritoCena.removeChild(cabeceraCarritoCena.firstChild)
